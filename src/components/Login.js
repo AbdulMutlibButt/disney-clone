@@ -1,55 +1,30 @@
-import styled from "styled-components";
 
 import React from "react";
-
+import "./Login.css";
 function Login() {
   return (
-    <Container>
-      <Content>
-        <CTA>
-          <CTALogoOne src="/project realted images/cta-logo-two.png" alt="" />
-        </CTA>
-        <BgImage />
-      </Content>
-    </Container>
+    <div className="login">
+      <div className="login-div">
+        <div className="login_main_div">
+          <img className="login_img1" src="/images/cta-logo-one.svg" alt="" />
+          <button className="login_button">GET ALL THERE</button>
+          <p className="login_discription">
+            Disney Plus is an on-demand, ad-free streaming service created by
+            The Walt Disney Company. With Disney Plus, subscribers can watch
+            thousands of Disney movies and series on their devices (smart TVs,
+            phones, laptops, tablets, and gaming consoles).
+          </p>
+
+          <img src="/images/cta-logo-two.png" alt="" />
+        </div>
+        <img
+          className="login_bgImage"
+          src="/images/login-background.jpg"
+          alt=""
+        />
+      </div>
+    </div>
   );
 }
-const Container = styled.section`
-  overflow: hidden;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  height: 100vh;
-`;
-const Content = styled.div`
-  margin-bottom: 10vh;
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 80px 40px;
-  height: 100%;
-`;
-const BgImage = styled.div`
-  background-image: url("/project realted images/login-background.jpg");
-  position: absolute;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-`;
-const CTA = styled.div``;
-const CTALogoOne = styled.img`
-  margin-bottom: 12px;
-  width: 100%px;
-`;
 
 export default Login;
