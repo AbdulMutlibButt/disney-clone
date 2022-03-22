@@ -47,16 +47,33 @@
     width: 20px;
     z-index: auto;
 }
-.header_navmenu_span{
-    color: rgb(249,249,249);
+
+.header_navmenu_span {
+    color: rgb(249, 249, 249);
     font-size: 13px;
     padding: 2px 0px;
     position: relative;
     line-height: 1.08;
     letter-spacing: 1.42px;
     white-space: nowrap;
+
 }
 
+.header_navmenu_login {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.4s ease 0s;
+}
+.header_navmenu_login:hover{
+    background-color: #f9f9f9;
+    color: #000;
+    border-color: transparent;
+    border-color: transparent;
+}
 /* @media (max-width:1800px) {
     .header_navmenu {
         display: none;
