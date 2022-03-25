@@ -68,14 +68,49 @@
     border-radius: 4px;
     transition: all 0.4s ease 0s;
 }
-.header_navmenu_login:hover{
+
+.header_navmenu_login:hover {
     background-color: #f9f9f9;
     color: #000;
     border-color: transparent;
     border-color: transparent;
 }
+
 /* @media (max-width:1800px) {
     .header_navmenu {
         display: none;
     }
 } */
+
+.header_navmenu_userphoto {
+    height: 70%;
+    border-radius: 50%;
+    width: 100%;
+}
+.header_navmenu_signOut > div:hover{
+    opacity: 1;
+}
+
+.header_navmenu_dropdown {
+    position: absolute;
+    top: 48px;
+    right: 0px;
+    background: rgb(19, 19, 19);
+    border: 1px solid rgba(151, 151, 151, 0.34);
+    border-radius: 4px;
+    box-shadow: rgb(0, 0, 0 / 50%) 0px 0px 18px 0px;
+    padding: 10px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    width: 100px;
+    opacity: 0;  
+}
+.header_navmenu_signOut{
+    position: relative;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
