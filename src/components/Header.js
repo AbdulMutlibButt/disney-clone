@@ -25,21 +25,28 @@ function Header() {
   }, [userName]);
 
   const handleAuth = () => {
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((e) => {
-        alert(e.message);
-      });
+    if (!userName) {
+      auth
+        .signInWithPopup(provider)
+        .then((result) => {
+          setUser(result.user);
+        })
+        .catch((e) => {
+          alert(e.message);
+        });
+    } else if (userName) {
+      auth
+        .signOut()
+        .then(() => {
+          history.push("/");
+          setUser("");
+        })
+        .catch((e) => {
+          alert(e.message);
+        });
+    }
   };
-  const logOut = () => {
-    auth.signOut().then(() => {
-      history.push("/");
-      setUser("");
-    });
-  };
+
   const setUser = (user) => {
     dispatch(
       setUserLoginDetails({
@@ -112,7 +119,7 @@ function Header() {
             <div className="header_navmenu_dropdown">
               <div
                 onClick={() => {
-                  logOut();
+                  handleAuth();
                 }}
                 className="header_navmenu_logOut"
               >
